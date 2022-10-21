@@ -1,0 +1,5 @@
+#! /bin/sh
+
+AUTORECONF=${AUTORECONF:-autoreconf}
+
+${AUTORECONF} --install --sym
