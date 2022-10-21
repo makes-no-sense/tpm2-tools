@@ -143,7 +143,7 @@ int tpm2_tool_onrun(TSS2_SYS_CONTEXT *sapi_context, tpm2_option_flags flags) {
 
     UINT32 property = tpm2_util_endian_swap_32(TPM2_HT_PERSISTENT);
     rval = TSS2_RETRY_EXP(Tss2_Sys_GetCapability(sapi_context, 0, TPM2_CAP_HANDLES,
-                                   property, TPM2_PT_TPM2_HR_PERSISTENT, &moreData,
+                                   property, TPM2_PT_HR_PERSISTENT, &moreData,
                                    &capabilityData, 0));
     if(rval != TPM2_RC_SUCCESS)
     {
